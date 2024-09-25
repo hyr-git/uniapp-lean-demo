@@ -234,19 +234,15 @@
 	 
 	 const current=ref(0);
 	 function onClickItem(e){
-		 console.log(e)
 		 current.value = e.currentIndex;
 		 
 		 const currentType = items[current.value].itemcode;
-		 console.log(currentType)
 		 
 		 if(currentType==='all'){
 			 pets.value = personList.value;
 		 }else{
 			 pets.value = personList.value.filter(item=>item.type===currentType);
 		 }
-		console.log(pets.value)
-		
 	 }
 </script>
 
